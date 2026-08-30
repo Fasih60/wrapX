@@ -74,6 +74,9 @@
     overflow-x: hidden;
     background: var(--aura-ink);
   }
+  h1, h2, h3, h4, h5, h6, p, a, span {
+    overflow-wrap: break-word;
+  }
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
   [type="button"]:not(:disabled),
@@ -336,7 +339,7 @@
 .footer-brand p { max-width: 16rem; margin: 1.2rem 0 0; color: var(--aura-ash); font-family: "IBM Plex Mono", monospace; font-size: 0.62rem; letter-spacing: 0.08em; line-height: 1.6; text-transform: uppercase; }
 .footer-heading { margin: 0 0 1rem; color: var(--aura-brass); font-family: "IBM Plex Mono", monospace; font-size: 0.6rem; letter-spacing: 0.14em; text-transform: uppercase; }
 .footer-links { display: flex; flex-wrap: wrap; gap: 0.7rem 1.25rem; }
-.footer-links a, .footer-contact a { color: rgba(236,232,223,0.67); font-size: 0.8rem; transition: color 180ms ease; }
+.footer-links a, .footer-contact a { color: rgba(236,232,223,0.67); font-size: 0.8rem; transition: color 180ms ease; overflow-wrap: break-word; word-break: break-word; }
 .footer-links a:hover, .footer-contact a:hover { color: var(--aura-brass-bright); }
 .footer-contact { display: grid; gap: 0.45rem; }
 .footer-bottom { display: flex; align-items: center; justify-content: space-between; gap: 1rem; border-top: 1px solid rgba(236,232,223,0.11); margin-top: 3rem; padding-top: 1.2rem; color: rgba(236,232,223,0.4); font-family: "IBM Plex Mono", monospace; font-size: 0.57rem; letter-spacing: 0.05em; }
@@ -407,7 +410,7 @@
   .section-head h2 { font-size: clamp(2.4rem, 11vw, 4.0rem); line-height: 0.90; }
   .service-card, .service-card:nth-child(2), .service-card:nth-child(5), .service-card:nth-child(3), .service-card:nth-child(6) { min-height: 20rem; margin-top: 0; }
   .service-card-content { right: 1rem; bottom: 1rem; left: 1rem; }
-  .service-card h3 { font-size: 2.05rem; }
+  .service-card h3 { font-size: clamp(1.75rem, 7vw, 2.2rem); }
   .service-card p { font-size: 0.825rem; line-height: 1.5; }
   .feature-copy { padding: 2.6rem 1rem; }
   .feature-copy h2 { font-size: clamp(2.6rem, 12vw, 4.2rem); line-height: 0.88; }
@@ -427,14 +430,14 @@
   .gallery-item { min-height: 11rem; }
   .gallery-item:first-child { min-height: 18rem; }
   .gallery-meta { right: 0.65rem; bottom: 0.6rem; left: 0.65rem; }
-  .gallery-meta strong { font-size: 1.3rem; }
+  .gallery-meta strong { font-size: clamp(1.1rem, 5vw, 1.4rem); }
   .gallery-meta span { font-size: 0.52rem; }
   .process-step { min-height: 13.5rem; padding: 1.15rem 0.9rem 1.4rem; }
   .process-step::after { top: 2.05rem; }
   .process-step h3 { margin-top: 1.25rem; font-size: 2rem; }
   .process-step p { max-width: 17rem; font-size: 0.8rem; }
   .testimonial { padding: 1.2rem; }
-  .testimonial blockquote { font-size: 1.8rem; }
+  .testimonial blockquote { font-size: clamp(1.5rem, 5.5vw, 1.9rem); }
   .final-cta { min-height: 34rem; }
   .final-content h2 { font-size: clamp(2.8rem, 13vw, 4.8rem); line-height: 0.88; }
   .final-actions .aura-btn { flex: 1 1 10rem; }
@@ -442,8 +445,14 @@
   .booking-backdrop { align-items: flex-end; padding: 0; }
   .booking-dialog { width: 100%; max-height: 92svh; overflow-y: auto; }
   .booking-content { padding: 1.75rem 1rem 1.25rem; }
-  .booking-content h2 { font-size: 3rem; }
+  .booking-content h2 { font-size: 2.6rem; }
   .booking-content > p { max-width: 19rem; }
   .booking-form { gap: 0.75rem; }
+  .form-field input, .form-field select, .form-field textarea { font-size: 1rem; }
   .form-field textarea { min-height: 4.25rem; }
+}
+
+@media (max-width: 380px) {
+  .hero-location { display: none; }
+  .hero-actions .aura-btn { flex: 1 1 100%; width: 100%; }
 }

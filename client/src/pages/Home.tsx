@@ -169,7 +169,6 @@ export default function Home() {
             <a href="#why-aura" onClick={() => setMenuOpen(false)}>Why Wrap.X</a>
             <a href="#gallery" onClick={() => setMenuOpen(false)}>Gallery</a>
             <a href="#process" onClick={() => setMenuOpen(false)}>Process</a>
-            <button className="aura-btn aura-btn-sm nav-mobile-cta" onClick={() => { setBookingOpen(true); setMenuOpen(false); }}>Book your service</button>
           </nav>
           <button className="aura-btn aura-btn-sm nav-cta" onClick={() => setBookingOpen(true)}>Book your service</button>
           <button className="nav-menu" onClick={() => setMenuOpen((open) => !open)} aria-label={menuOpen ? "Close menu" : "Open menu"} aria-expanded={menuOpen}>
@@ -282,9 +281,9 @@ export default function Home() {
                 <div className="comparison-before-wrap" style={{ width: `${comparison}%` }}><img className="comparison-before" src={publicAssets.finish} alt="Same finish with a muted treatment preview" /></div>
                 <span className="comparison-label before">Before</span>
                 <span className="comparison-label after">After</span>
-                <div className="comparison-handle" style={{ left: `${comparison}%` }}><div className="comparison-handle-box"><MoveHorizontal size={16} /></div></div>
+                <div className="comparison-handle" style={{ left: `${comparison}%` }}><span /></div>
               </div>
-              <div className="comparison-caption"><strong>Paint correction / Porsche 911</strong><span><MoveHorizontal size={14} /> Drag to compare</span></div>
+              <div className="comparison-caption"><strong>Paint correction / Porsche 911</strong><span>Drag to compare</span></div>
             </div>
           </div>
         </section>
